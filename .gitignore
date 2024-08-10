@@ -1,0 +1,30 @@
+# Node modules
+node_modules/
+
+# Build output
+dist/
+build/
+
+# Log files
+*.log
+
+# Environment files
+.env
+
+# Dependency directories
+jspm_packages/
+
+# TypeScript output
+*.tsbuildinfo
+
+# Next.js build output
+.next/
+
+# Mac system files
+.DS_Store
+
+# VS Code settings
+.vscode/
+
+# Tailwind CSS JIT
+tailwind.config.js
