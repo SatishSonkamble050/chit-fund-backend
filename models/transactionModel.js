@@ -9,7 +9,8 @@ const TransactionSchema = new mongoose.Schema({
   organizationId: { type: mongoose.Schema.Types.ObjectId, ref: 'Organization', required: true }, // Reference to Organization
   chitMonth: { type: Number, required: true }, // Month of the chit
   chitYear: { type: Number, required: true }, // Year of the chit
-  paymentDate: { type: Date, required: true } // When the payment was made
+  paymentDate: { type: Date, required: true }, // When the payment was made
+  paymentMode : { type : String}
 }, { timestamps: true });
 
 module.exports = mongoose.model('Transaction', TransactionSchema);

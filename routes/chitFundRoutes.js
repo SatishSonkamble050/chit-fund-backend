@@ -11,6 +11,8 @@ router.delete('/:id',authenticateToken, chitFundController.deleteChitFund);
 router.get('/organization/:organizationId', chitFundController.getChitFundsByOrganization);
 router.post('/add-member', chitFundController.addMemberToChitFund);
 router.delete('/:chitFundId/member/:memberId', chitFundController.removeMemberFromChitFund);
+router.get('/chit-fund-payments/:chitFundId', chitFundController.getChitFundPayments);
+router.post('/member-payment-status', chitFundController.getMemberPaymentStatus);
 
 
 module.exports = router;

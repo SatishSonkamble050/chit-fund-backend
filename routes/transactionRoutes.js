@@ -4,7 +4,7 @@ const transactionController = require('../controllers/transactionController');
 const authenticateToken = require('../middleware/authMiddleware');
 
 // Create a new transaction (protected route)
-router.post('/', authenticateToken, transactionController.createTransaction);
+router.post('/', transactionController.createTransaction);
 
 // Get all transactions (protected route)
 router.get('/', authenticateToken, transactionController.getTransactions);

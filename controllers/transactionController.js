@@ -1,4 +1,6 @@
 const Transaction = require('../models/transactionModel');
+const ChitFund = require('../models/chitFundModel');
+const User = require('../models/userModel');
 
 // Create a new transaction
 exports.createTransaction = async (req, res) => {
@@ -8,10 +10,11 @@ exports.createTransaction = async (req, res) => {
       amount: req.body.amount,
       chitFundId: req.body.chitFundId,
       userId: req.body.userId,
-      organizationId: req.body.organizationId,
+      organizationId: req.body.organizationId,  
       chitMonth: req.body.chitMonth,
       chitYear: req.body.chitYear,
-      paymentDate: req.body.paymentDate
+      paymentDate: req.body.paymentDate,
+      paymentMode : req.body.paymentMode
     });
 
     const savedTransaction = await transaction.save();
@@ -63,3 +66,8 @@ exports.deleteTransaction = async (req, res) => {
     res.status(500).json({ error: error.message });
   }
 };
+
+
+
+
+
